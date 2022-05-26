@@ -4,7 +4,6 @@ body {
 }
 
 #principal {
-    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,17 +14,9 @@ body {
     background-color: #ffffff;
     border-radius: 25px;
     padding: 15px;
-    
-    /* display: grid;
-    grid-template-columns: repeat(4, 75px);
-    grid-template-rows: 160px repeat(5, 75px);
-    align-items: center;
-    justify-content: center; */
 }
 
-#divTitulo {
-    /* align-items: center;
-    justify-content: center; */
+#divTitle {
     display: grid;
     margin: 2.5px;
     padding: 2.5px;

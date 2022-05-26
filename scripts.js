@@ -1,75 +1,71 @@
 
+//Este array guarda el último resultado calculado
 const resAnterior = [];
 
-const mostrarEnPantalla = (value) => {
-    document.getElementById('pantalla').innerHTML += value;
+//Aquí se declaran e inicializan las funciones
+const displayOnScreen = (value) => {
+    document.getElementById('display').innerHTML += value;
 }
 
 const calcularSeno = () => {
-    const valueS = document.getElementById('pantalla').innerText;
-    
-    const valueB = Math.sin(valueS);
-    const value = valueB.toFixed(2);
-    document.getElementById('pantallaResultado').innerHTML = value;
-    document.getElementById('pantalla').innerHTML = "";
+    const value1 = document.getElementById('display').innerText;
+    const value2 = Math.sin(value1);
+    const value = value2.toFixed(2);
+    document.getElementById('showResult').innerHTML = value;
+    document.getElementById('display').innerHTML = "";
 }
 
 const calcularCoseno = () => {
-    const valueS = document.getElementById('pantalla').innerText;
-    
-    const valueB = Math.cos(valueS);
-    const value = valueB.toFixed(2);
-    document.getElementById('pantallaResultado').innerHTML = value;
-    document.getElementById('pantalla').innerHTML = "";
+    const value1 = document.getElementById('display').innerText;
+    const value2 = Math.cos(value1);
+    const value = value2.toFixed(2);
+    document.getElementById('showResult').innerHTML = value;
+    document.getElementById('display').innerHTML = "";
 }
 
 const calcularTangente = () => {
-    const valueS = document.getElementById('pantalla').innerText;
+    const valueS = document.getElementById('display').innerText;
     
     const valueB = Math.tan(valueS);
     const value = valueB.toFixed(2);
-    document.getElementById('pantallaResultado').innerHTML = value;
-    document.getElementById('pantalla').innerHTML = "";
+    document.getElementById('showResult').innerHTML = value;
+    document.getElementById('display').innerHTML = "";
 }
 
 const calcularLogaritmo = () => {
-    const valueS = document.getElementById('pantalla').innerText;
-    
-    const valueB = Math.log(valueS);
-    const value = valueB.toFixed(2);
-    document.getElementById('pantallaResultado').innerHTML = value;
-    document.getElementById('pantalla').innerHTML = "";
+    const value1 = document.getElementById('display').innerText;
+    const value2 = Math.log(value1);
+    const value = value2.toFixed(2);
+    document.getElementById('showResult').innerHTML = value;
+    document.getElementById('display').innerHTML = "";
 }
 
 const calcularRaiz = () => {
-    const valueS = document.getElementById('pantalla').innerText;
-    
+    const valueS = document.getElementById('display').innerText;
     const valueB = Math.sqrt(valueS);
     const value = valueB.toFixed(1);
-    document.getElementById('pantallaResultado').innerHTML = value;
-    document.getElementById('pantalla').innerHTML = "";
-    
+    document.getElementById('showResult').innerHTML = value;
+    document.getElementById('display').innerHTML = "";
 }
 
 const calculo = () => {
-    let esc = eval(document.getElementById('pantalla').innerHTML);
-    document.getElementById('pantallaResultado').innerText = esc;
-
-    document.getElementById('pantalla').innerHTML = "";
-
+    let esc = eval(document.getElementById('display').innerHTML);
+    document.getElementById('showResult').innerText = esc;
+    document.getElementById('display').innerHTML = "";
     resAnterior.push(esc);
 }
 
 const limpiarPantallas = () => {
-    document.getElementById('pantalla').innerHTML = "";
-    document.getElementById('pantallaResultado').innerHTML = "";
+    document.getElementById('display').innerHTML = "";
+    document.getElementById('showResult').innerHTML = "";
 }
 
 const del = () => {
-    const newText = document.getElementById('pantalla').innerHTML;
-    document.getElementById('pantalla').innerText = newText.substring(0, newText.length - 1);
+    const newText = document.getElementById('display').innerHTML;
+    document.getElementById('display').innerText = newText.substring(0, newText.length - 1);
 }
 
+//Los valores de entrada de las teclas se guardan en una variable
 
 const uno = document.getElementById("numUno");
 const dos = document.getElementById("numDos");
@@ -83,93 +79,95 @@ const nueve = document.getElementById("numNueve");
 const cero = document.getElementById("numCero");
 
 const borrar = document.getElementById("borrarTodo");
+const ultimoR = document.getElementById("anterior");
 const seno = document.getElementById("seno");
 const coseno = document.getElementById("coseno");
+const tangente = document.getElementById("tangente");
 const borraUltimo = document.getElementById("borraUltimo");
 const ln = document.getElementById("logaritmo");
 const raiz = document.getElementById("raiz");
-const tangente = document.getElementById("tangente");
 const dividir = document.getElementById("dividir");
+const multiplicar = document.getElementById("multiplicar");
 const sumar = document.getElementById("sumar");
 const restar = document.getElementById("tecRestar");
 const igual = document.getElementById("igual");
-const ultimoR = document.getElementById("anterior");
-const multiplicar = document.getElementById("multiplicar");
 const coma = document.getElementById("coma");
 
-uno.addEventListener("click", function () { 
-    mostrarEnPantalla(1);
+//Aquí se espera el evento de las teclas para ejecutar una función
+
+uno.addEventListener("click", () => { 
+    displayOnScreen(1);
 })
 
-dos.addEventListener("click", function () { 
-    mostrarEnPantalla(2);
+dos.addEventListener("click", () => { 
+    displayOnScreen(2);
 })
 
-tres.addEventListener("click", function () { 
-    mostrarEnPantalla(3);
+tres.addEventListener("click", () => { 
+    displayOnScreen(3);
 })
 
-cuatro.addEventListener("click", function () { 
-    mostrarEnPantalla(4);
+cuatro.addEventListener("click", () => { 
+    displayOnScreen(4);
 })
 
-cinco.addEventListener("click", function () { 
-    mostrarEnPantalla(5);
+cinco.addEventListener("click", () => { 
+    displayOnScreen(5);
 })
 
-seis.addEventListener("click", function () { 
-    mostrarEnPantalla(6);
+seis.addEventListener("click", () => { 
+    displayOnScreen(6);
 })
 
-siete.addEventListener("click", function () { 
-    mostrarEnPantalla(7);
+siete.addEventListener("click", () => { 
+    displayOnScreen(7);
 })
 
-ocho.addEventListener("click", function () { 
-    mostrarEnPantalla(8);
+ocho.addEventListener("click", () => { 
+    displayOnScreen(8);
 })
 
-nueve.addEventListener("click", function () { 
-    mostrarEnPantalla(9);
+nueve.addEventListener("click", () => { 
+    displayOnScreen(9);
 })
 
-cero.addEventListener("click", function () { 
-    mostrarEnPantalla(0);
+cero.addEventListener("click", () => { 
+    displayOnScreen(0);
 })
 
-borrar.addEventListener("click", function() {
+borrar.addEventListener("click", () => {
     limpiarPantallas();
 });
 
-borraUltimo.addEventListener("click", function () {
+borraUltimo.addEventListener("click", () => {
     del();
 })
 
-dividir.addEventListener("click", function () { 
-    mostrarEnPantalla("/");
+dividir.addEventListener("click", () => { 
+    displayOnScreen("/");
 });
 
-sumar.addEventListener("click", function () { 
-    mostrarEnPantalla('+');
+sumar.addEventListener("click", () => { 
+    displayOnScreen('+');
 });
 
-restar.addEventListener("click", function () { 
-    mostrarEnPantalla("-");
+restar.addEventListener("click", () => { 
+    displayOnScreen("-");
 })
-multiplicar.addEventListener("click", function () { 
-    mostrarEnPantalla('*');
+multiplicar.addEventListener("click", () => { 
+    displayOnScreen('*');
 })
-coma.addEventListener("click", function () { 
-    mostrarEnPantalla(".");
+coma.addEventListener("click", () => { 
+    displayOnScreen(".");
 })
 
-igual.addEventListener("click", function () {
+igual.addEventListener("click", () => {
     calculo();
 })
 
-ultimoR.addEventListener("click", function () { 
+ultimoR.addEventListener("click", () => { 
     const value = resAnterior[resAnterior.length - 1];
     console.log(value);
     
-    mostrarEnPantalla(value);
+    displayOnScreen(value);
 });
