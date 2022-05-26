@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Calculadora científica</title>
+</head>
+<body>
+    <div id="principal" name="divP">
+    
+        <main id="main" name="mainP">
+            
+            <div id="divTitulo">
+                <h1 id="titulo">Calculadora</h1>
+            </div>
+            
+            <div id="divR" name="divR">
+                <span id="pantallaResultado" name="pant"></span><br>
+                <span id="pantalla"></span>
+            </div>
+
+            <div class="divi">
+                
+                <div id="fila1">
+                    <button class="boton" id="borrarTodo">C</button>
+                </div>
+
+                <div id="fila2">
+                    <button class="boton" id="anterior">Ans</button>
+                    <button class="boton" id="seno" onclick="calcularSeno()">Sin</button>
+                    <button class="boton" id="coseno" onclick="calcularCoseno()">Cos</button>
+                    <button class="boton" id="tangente" onclick="calcularTangente()">Tan</button>
+                </div>
+
+                <div id="fila3">
+                    <button class="boton" id="borraUltimo">Del</button>
+                    <button class="boton" id="logaritmo" onclick="calcularLogaritmo()">Ln</button>
+                    <button class="boton" id="raiz" onclick="calcularRaiz()">&radic;</button>
+                    <button class="boton" id="dividir" >/</button>
+                </div>
+
+                <div>
+                    <button class="boton" id="numSiete">7</button>
+                    <button class="boton" id="numOcho">8</button>
+                    <button class="boton" id="numNueve">9</button>
+                    <button class="boton" id="multiplicar" >*</button>
+
+                </div>
+
+                <div>
+                    <button class="boton" id="numCuatro">4</button>
+                    <button class="boton" id="numCinco">5</button>
+                    <button class="boton" id="numSeis">6</button>
+                    <button class="boton" id="sumar" >+</button>
+
+                </div>
+
+                <div>
+                    <button class="boton" id="numUno">1</button>
+                    <button class="boton" id="numDos">2</button>
+                    <button class="boton" id="numTres">3</button>
+                    <button class="boton" id="tecRestar">-</button>
+
+                </div>
+
+                <div>
+                    <button class="boton" id="coma">.</button>
+                    <button class="boton" id="numCero">0</button>
+                    <button class="boton" id="porcetaje" onclick="porcetaje()">%</button>
+                    <button class="boton" id="igual" >=</button>
+                </div>
+
+                <div id="info">
+                    <p>sduncanv</p>
+                </div>
+            </div>
+        </main>
+    
+    </div>
+
+    <script src="./scripts.js"></script>
+</body>
+</html>
